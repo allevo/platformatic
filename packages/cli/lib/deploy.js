@@ -90,15 +90,22 @@ export async function deploy (argv) {
   }
 
   let label = args.label
-  /* c8 ignore next 9 */
-  if (workspaceType === 'dynamic' && !label) {
-    const answer = await inquirer.prompt({
-      type: 'input',
-      name: 'label',
-      message: 'Enter deploy label:',
-      default: 'cli:deploy-1'
-    })
-    label = answer.label
+  if (workspaceType === 'dynamic') {
+    /* c8 ignore next 9 */
+    if (!label) {
+      const answer = await inquirer.prompt({
+        type: 'input',
+        name: 'label',
+        message: 'Enter deploy label:',
+        default: 'cli:deploy-1'
+      })
+      label = answer.label
+    }
+
+    if (!label.startsWith('cli:')) {
+      logger.error('Invalid deploy label provided. Deploy label must start with "cli:".')
+      process.exit(1)
+    }
   }
 
   let pathToConfig = args.config
