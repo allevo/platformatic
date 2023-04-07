@@ -23,6 +23,7 @@ export async function deploy (argv) {
     alias: {
       config: 'c',
       type: 't',
+      label: 'l',
       env: 'e',
       secrets: 's'
     },
@@ -31,6 +32,8 @@ export async function deploy (argv) {
       'label',
       'workspace-id',
       'workspace-key',
+      'env',
+      'secrets',
       'deploy-service-host'
     ],
     default: {
