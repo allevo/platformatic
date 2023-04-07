@@ -63,8 +63,8 @@ importers:
         specifier: workspace:*
         version: link:../db
       '@platformatic/deploy-client':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.1.1
+        version: 0.1.1
       '@platformatic/metaconfig':
         specifier: workspace:*
         version: link:../metaconfig
@@ -3837,8 +3837,8 @@ packages:
       rimraf: 3.0.2
     optional: true
 
-  /@platformatic/deploy-client@0.1.0:
-    resolution: {integrity: sha512-bo+QW+0hFpkdFiE/7PH+MIuaas65/wPwUbvJb0Jgtpq+sMfZt8o1VdE/VsfnWCW/nV7YNcAQw+o4uUv1yqn1oA==}
+  /@platformatic/deploy-client@0.1.1:
+    resolution: {integrity: sha512-WG8NYJFXWXJ0m2ByLAM44gIkj7eeU1QXIAuzz5JGKhuxh6zQx0JTqVJPdMqA2/kYOo/I9E3GRyROWGeotaeRbg==}
     dependencies:
       tar: 6.1.13
       undici: 5.21.0
