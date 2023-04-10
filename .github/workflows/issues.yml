@@ -19,7 +19,7 @@ jobs:
       - name: Add to Project
         env:
           TOKEN: ${{ steps.generate_token.outputs.token }}
-        uses: actions/add-to-project@80dff8360364fc9d8c5ca58b41c535e66b66c331
+        uses: actions/add-to-project@436b60e3c77ce7f7cb1760b6ff41d2d8fc2dccb9
         with:
           project-url: https://github.com/orgs/platformatic/projects/1
           github-token: ${{ env.TOKEN }}
